@@ -1,0 +1,59 @@
+#easy 10
+#hard 5
+#This will choose the random number for guessing
+ans=random.randint(1,100)
+chance=1
+#How many attempts left for user
+attempt_left=0
+# print(ans)
+def easy():
+    print("You have 10 attempts")
+    global chance
+    while(chance<=10):
+        ans_num=int(input("Make a guess\t"))
+        if ans_num==ans:
+            print("You guess correctly")
+            break
+        elif ans_num>ans:
+            print("Too High !!")
+        else:
+            print("Too Low !!")
+        attempt_left=10-chance
+        if attempt_left>0:
+            print(f"You have {attempt_left} attempts, Guess Again")
+        if attempt_left==0:
+            print("You user your all chance")
+        chance=chance+1
+
+
+def hard():
+    print("You have 5 attempts")
+    global chance
+    while(chance<=5):
+        ans_num=int(input("Make a guess\t"))
+        if ans_num==ans:
+            print("You guess correctly")
+            break
+        elif ans_num>ans:
+            print("Too High !!")
+        else:
+            print("Too Low !!")
+        attempt_left=5-chance
+        if attempt_left>0:
+            print(f"You have {attempt_left} attempts, Guess Again")
+        if attempt_left==0:
+            print("You user your all chance")
+        chance=chance+1
+
+
+
+print("Think a number between 1 and 100")
+user_response=input("Type 'easy' or 'hard'\t")
+if user_response=='easy':
+    easy()
+elif user_response=='hard':
+    hard()
+else:
+    print("You type other than this")
+
+
