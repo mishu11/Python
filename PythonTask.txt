@@ -1,0 +1,229 @@
+
+#Arithmetic operators
+# Assignment operators
+# Comparison operators
+# Logical operators
+# Identity operators
+# Membership operators
+# Bitwise operators
+
+####################    Give Donation ###########
+
+    
+how_many=int(input("Enter how many artist are there\n"))
+artist_salary=[]
+artist_names=[]
+for i in range(1,how_many+1):
+    name=str(input("Enter the name of artists\n"))
+    artist_names.append(name)
+    new=int(input("Enter the salaries of artist\n"))
+    artist_salary.append(new)
+    
+
+# for i in range(1,how_many+1):
+#     name=str(input("Enter the name of artists\n"))
+#     artist_names.append(name)
+
+print(artist_salary)
+print(artist_names)
+
+length=len(artist_salary)
+for i in range(length):
+    if i < 10000:
+        artist_salary[i]=artist_salary[i]+500
+    if i >=10000:
+        artist_salary[i]=artist_salary[i]-1000
+    elif i>=20000:
+        artist_salary[i]=artist_salary[i]-2500
+print("After giving some amount of money to charity")
+artist_info=zip(artist_names,artist_salary)
+print(list(artist_info))
+# print(artist_salary)
+
+--------------------------------
+
+#whileloop
+#for loop
+#do-while loops
+
+###Guess Pin Password  #######
+import random
+
+password_length=int(input("Enter the length of password\n"))
+password_generate=[]
+user_password=[]
+i=0
+while i < password_length:
+    digits=random.randint(1,100)
+    password_generate.append(digits)
+    i+=1
+print(password_generate)
+
+print(f"You have 5 chances and password length is {password_length}")
+k=0
+while k<5:
+    h=0
+    next=1
+    while h<password_length:
+        print(f"Enter {next} num")
+        next+=1
+        user_input=int(input())
+        user_password.append(user_input)
+        h+=1
+        print(user_password)
+        if password_generate==user_password:
+            print("You guess correctly")
+        else:
+            user_password.clear()
+    # print(user_password)
+    k+=1
+    
+
+
+##################STRING MANUPILATION########3
+gia='learn Python learn'
+print(gia.capitalize())
+print(gia.center(22)) #Returns a centered string
+print(gia.count('learn'))
+print(gia.find('Python')) # it work as index
+print(gia.index('learn'))
+print(gia.istitle())
+print(gia.isupper())
+print(gia.islower())
+print(gia.upper())
+print(gia.lower())
+print(gia.swapcase())
+print(gia.split())# it returns in list
+gia='   bigger game'
+print(gia.strip())
+print("$ ".join(gia))
+
+#given 2 strings are there in list ,convert it into single words.
+game=['thanking to you','search yourself']
+newlist=[]
+for i in game:
+    g=i.split()
+    for k in g:
+        newlist.append(k)
+print(newlist)
+
+##Exception handling
+
+def divide_six(number):
+     try:
+         print(f"Result: {6/number}")
+     except:
+         print("you are taking denominator as 0 ")
+     finally:
+        print("The function divide_six is completed.")
+        
+divide_six(2)
+divide_six(0)
+
+
+#######linked list with the help of library ######
+import collections
+
+# initialising a deque() of arbitrary length
+linked_lst = collections.deque()
+
+# filling deque() with elements
+linked_lst.append('first')
+linked_lst.append('second')
+linked_lst.append('third')
+
+print("elements in the linked_list:")
+print(linked_lst)
+
+# adding element at an arbitrary position
+linked_lst.insert(1, 'fourth')
+
+print("elements in the linked_list:")
+print(linked_lst)
+
+# deleting the last element
+linked_lst.pop()
+
+print("elements in the linked_list:")
+print(linked_lst)
+
+# removing a specific element
+linked_lst.remove('fourth')
+
+print("elements in the linked_list:")
+print(linked_lst)
+
+
+################ DICTIONARIES #######
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+     #DICTIONARY
+my_dict = {'name': 'Jack', 'age': 26}
+
+
+print(my_dict['name'])
+
+
+print(my_dict.get('age'))
+#Both are having same output
+print(my_dict['age'])
+
+
+# print(my_dict.get('address'))
+
+# # KeyError
+# print(my_dict['address'])
+
+#We can also add in dictionaries
+my_dict['sports']='Badminton'
+print(my_dict)
+
+#we can also remove the items in dictionaries
+my_dict.pop('age')
+print(my_dict)
+#clear() function deletes all the item which are
+
+print('name' in my_dict)
+
+for i in my_dict:
+    print(my_dict[i])
+
+
+######SET##########
+
+#WE CAN CREATE SETS WITH HELP OF {} BRACKETS OR WE CAN USE 'SET' KEYWORD TO MAKE 
+days={'Mon','Tue','Wed','Thurs','fri','sat'}
+print(type(days))
+months=set(['jan','feb','march'])
+#we are using [] brackets because sets take only 1 arguments and we have to put more than 1
+print(months)
+
+#we can add also
+days.add('Non-workingDay')
+print(days)
+
+#set doesn't take duplicate values
+days={'Mon','tue','Mon'}
+print(days)
+
+#########TUPLES#######
+ice_cream_flavors = ('Chocolate', 'Vanilla', 'Mint', 'Strawberry', 'Choc-Chip')
+print(ice_cream_flavors[3])
+print(ice_cream_flavors[-1])
+print(ice_cream_flavors[1:4])
+print(ice_cream_flavors[:2])
+
+ice_cream_flavors = ('Chocolate', 'Vanilla', 'Mint', 'Strawberry', 'Choc-Chip')
+if "Mint" in ice_cream_flavors:
+	print("Yes, we sell mint ice cream!")
+
+
+
+
+
+
+
+
+
+
+
