@@ -1,0 +1,12 @@
+#Create Acronyms using Python
+#eg.RAM-->Ranom Access Memory , NLP-->Natural Language Processing
+
+user_input=input("Enter a Phrase")
+text=user_input.split()
+text
+
+a=' '
+for i in text: 
+  print(i)
+  a+=str(i[0]).upper()
+a
